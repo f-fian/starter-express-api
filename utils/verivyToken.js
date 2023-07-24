@@ -2,8 +2,12 @@ import jwt from "jsonwebtoken"
 
 export const verifyUser = (req,res,next)=>{
     let token = req.cookies.accessToken
+    console.log("atas");
+    console.log(token);
     if(!token){
         const header = req.headers["authorization"]
+        console.log("header");
+        console.log(header);
         if(!header){
             return res.status(403).json({success:false,message:"You are not authorize"})
         }
