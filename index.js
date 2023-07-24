@@ -1,7 +1,18 @@
-const express = require('express')
+
+
+import express from "express"
+
+const PORT = process.env.PORT || 3000
 const app = express()
-app.all('/', (req, res) => {
-    console.log("Just got a request!")
-    res.send('Yo!')
+
+
+app.get("/alfian",(req,res)=>{
+    res.json({name:"Alfian Alamsyah"})
 })
-app.listen(process.env.PORT || 3000)
+
+
+app.listen(PORT,()=>{
+    console.log(`app is running at port ${PORT}`);
+})
+
+
