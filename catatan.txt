@@ -1,0 +1,2 @@
+- kalo sting dari postman "29-01-2022" jadi date itu gimana dah masuk ke monggose nya
+  ternyata salah format aja, harusnya "tahun-bulan-tanggal" --> "2022-10-30"
