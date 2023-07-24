@@ -23,7 +23,7 @@ const corsOption = {
 mongoose.set("strictQuery",false)
 const connectDb = async()=>{
     try {
-        await mongoose.connect(process.env.MONGO_URI2,{
+        await mongoose.connect(process.env.MONGO_URI,{
             useNewUrlParser:false,
             useUnifiedTopology:true
         })
@@ -51,7 +51,7 @@ app.use("/api/v1/booking",bookingRouter)
 
 
 app.get("/",(req,res)=>{
-    res.send("Alfian Alamsyah")
+    res.json({status:true,progress:"Running"})
 })
 
 
